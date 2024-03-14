@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http.response import JsonResponse
+from django.http.response import HttpResponse
 
 
 # Create your views here.
@@ -7,6 +8,10 @@ from django.http.response import JsonResponse
 def welcome_note(request):
     content = {"message": "User Management API"}
     return JsonResponse(data=content)
+
+
+def hello(request):
+    return HttpResponse("Hello World!")
 
 
 def create_user(request):
